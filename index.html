@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauka ładnego pisania</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <h2>Generator Arkuszy</h2>
+
+        <div class="control-group">
+            <label>Tekst</label>
+            <textarea id="textInput">Biega, krzyczy pan Hilary:
+„Gdzie są moje okulary?”
+
+Szuka w spodniach i w surducie,
+W prawym bucie, w lewym bucie.
+
+Wszystko w szafach poprzewracał,
+Maca szlafrok, palto maca.
+
+„Skandal! – krzyczy - nie do wiary!
+Ktoś mi ukradł okulary!”
+
+Pod kanapą, na kanapie,
+Wszędzie szuka, parska, sapie!
+
+Szpera w piecu i w kominie,
+W mysiej dziurze i w pianinie.
+
+Już podłogę chce odrywać,
+Już policję zaczął wzywać.
+
+Nagle - zerknął do lusterka…
+Nie chce wierzyć… Znowu zerka.
+
+Znalazł! Są! Okazało się,
+Że je ma na własnym nosie.
+</textarea>
+        </div>
+
+        <div class="control-group">
+            <label>Rozmiar: <span id="fontSizeVal">90</span>px</label>
+            <input type="range" id="fontSize" min="60" max="250" value="90">
+        </div>
+
+        <div class="control-group">
+            <label>Interlinia: <span id="lineSpacingVal">120</span>px</label>
+            <input type="range" id="lineSpacing" min="80" max="400" value="120">
+        </div>
+
+        <div class="control-group">
+            <label>Przezroczystość: <span id="opacityVal">0.2</span></label>
+            <input type="range" id="opacity" min="0.05" max="1" step="0.05" value="0.2">
+        </div>
+
+        <button id="downloadPdf">Generuj PDF</button>
+        <div class="status" id="fontStatus">Wstrzykiwanie czcionki...</div>
+    </div>
+
+    <div id="preview-container">
+        <div id="canvas-wrap">
+            <canvas id="previewCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
